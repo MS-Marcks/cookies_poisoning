@@ -1,0 +1,33 @@
+<!-- dashboard.component.html -->
+<div class="container-fluid">
+  <!-- Header con Navbar -->
+  <header class="bg-primary text-white p-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 class="h3 mb-0">Dashboard</h1>
+      <nav class="nav">
+        <a class="nav-link text-white" href="#">Inicio</a>
+        <a class="nav-link text-white" href="#">Perfil</a>
+        <a class="nav-link text-white" href="#">Ajustes</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <div class="row mt-4">
+    <div class="col-md-3">
+      <!-- Sidebar -->
+      <ul class="list-group">
+        <li class="list-group-item" *ngIf="isAdmin ==='true'"><a routerLink="restricted">Administrador</a></li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+      <!-- Área de Contenido -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Bienvenido al Dashboard</h5>
+          <p class="card-text">Aquí va el contenido principal del dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
